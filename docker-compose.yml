@@ -14,7 +14,7 @@ services:
 
   processor:
     deploy:
-      replicas: 3
+      replicas: 0
     depends_on:
       - kafka
     build:
