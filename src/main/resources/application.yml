@@ -1,0 +1,24 @@
+quarkus:
+  swagger-ui:
+    always-include: true
+mp:
+  messaging:
+    outgoing:
+      words-out:
+        topic: "words"
+      uppercase-out:
+        topic: "uppercase"
+    incoming:
+      words-in:
+        auto:
+          offset:
+            reset: "earliest"
+        topic: "words"
+      uppercase-in:
+        auto:
+          offset:
+            reset: "latest"
+        topic: "uppercase"
+        group:
+          id: ${demo.group:web}
+
